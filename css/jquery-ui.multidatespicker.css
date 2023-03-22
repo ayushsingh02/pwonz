@@ -1,0 +1,63 @@
+/* jQuery UI Datepicker moving pixels fix */
+table.ui-datepicker-calendar {border-collapse: separate;}
+.ui-datepicker-calendar td {border: 1px solid transparent;}
+
+/* jQuery UI Datepicker hide datepicker helper */
+#ui-datepicker-div {display:none;}
+
+/* jQuery UI Datepicker emphasis on selected dates */
+.ui-datepicker .ui-datepicker-calendar .ui-state-highlight a {
+	background: white !important;
+	color: #ff6363;
+font-weight: bold !important;
+
+}
+.ui-datepicker{
+	border: none !important;
+	width: 100% !important;	
+	border-radius: 8px;
+}
+.ui-datepicker-header{
+	background: white;
+    border: none;
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    border: none;
+	font-weight: bold;
+    /* background: green !important; */
+    color: green !important;
+	background: white;
+}
+.ui-state-default, .ui-widget-content .ui-state-default{
+	border: none;
+	background: white;
+}
+.ui-datepicker-title{
+	background-color: #F5F5F5;
+	border-radius: 6px;
+}
+.ui-state-active, .ui-widget-content .ui-state-active{
+	color: black;
+}
+.ui-state-default:hover{
+	color: #ff6363;
+	font-weight: bold;
+}
+.ui-datepicker-multi .ui-datepicker-group table	{
+	width: 85% !important;
+}
+@media (max-width:480px){
+	.ui-datepicker-multi-3 .ui-datepicker-group {
+		width: 100%;
+	}
+}
+@media (max-width:780px){
+	.ui-datepicker-multi-3 .ui-datepicker-group {
+		width: 100%;
+	}
+}
+@media (min-width:1200px){
+	.ui-datepicker {
+		height: 310px;
+	}
+}
