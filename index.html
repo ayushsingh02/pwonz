@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- Fontawesome  -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+  <!-- Google font  -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- owl-carousel  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <link rel="stylesheet" href="css/animate.css">
+ 
+  <title>Pest Wipeout</title>
+  <link rel="icon" type="image/x-icon" href="images/logo.png">
+</head>
+<!-- Navigation Bar -->
+<div id="header"></div>
+<script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+</script>
+<script>
+  $(function(){
+  $("#header").load("header.html"); 
+});
+</script>
+<a href="" id="scrollToTop_btn"><span></span></a>
+
+<!-- Banner  -->
+<section class="bg_grey banner_main mt-lg-80 mt-md-80 mt-sm-80" id="b1">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+
+        <h1 class="mt-5 pt-lg-5 wow fadeInDown"  data-wow-delay="0.1s">
+          Search for places, enjoy safe hunting.
+        </h1>
+        <p class="mt-3 mb-5 wow fadeInUp">
+          If you are a registered hunter in NZ you can search the site and
+          book your favourite one. If you own a land that you want to make
+          extra income then list your site.
+        </p>
+      </div>
+      <div class="col-lg-6 mt-5 mb-5 mb-xs-0  wow fadeInRight" data-wow-delay="0.1s">
+        <img src="images/mountain.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Banner 2  -->
+<section class="bg_grey banner_main mt-lg-80 mt-md-80 mt-sm-80" style="display: none;" id="b2">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+
+        <h1 class="mt-5 pt-lg-5 wow fadeInDown" data-wow-delay="0.1s">
+          Searching for Pest Control Sevice?
+        </h1>
+        <p class="mt-3 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+          Whether you need one-off advice and assistance, or ongoing care and maintenance, find the best sevice near
+          from your property or farm.
+        </p>
+      </div>
+      <div class="col-lg-6 mt-5 mb-5  wow fadeInRight" data-wow-delay="0.1s">
+        <img src="images/slide2.png" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Card  -->
+<section id="search_box">
+  <div class="container"  id="card_box">
+    <div class="card_main mt-xs-4 mb-xs-4">
+      <div class="container">
+        <ul class="nav nav-tab">
+          <li class="nav-item clearfix" id="hunt_btn">
+            <a class="nav-link active" href="#hunt">Hunting Sites</a>
+            <input type="radio" name="hunt" class="radio_input" checked>
+          </li>
+          <li class="nav-item clearfix" id="pest_btn">
+            <a class="nav-link" href="#pest">Pest control services</a>
+            <input type="radio" class="radio_input" name="pest">
+          </li>
+        </ul>
+        <!-- Card content-->
+        <div class="row ps-lg-3 pe-lg-3 svg_img_icons">
+          <div class="col-lg-3 col-sm-12 pt-4 pt-md-3">
+            <img src="images/svg/Pin_alt_duotone.svg" alt="">&nbsp;
+            <label for="location">Location</label>
+            <input class="form-control location_mapapi " id="location_mapapi" type="text" placeholder="" value="">
+            <input type="text" name="location_lat" id="location_lat" value="" hidden>
+            <input type="text" name="location_lng" id="location_lng" value="" hidden>
+          </div>
+          <div class="col-lg-3 col-sm-12 pt-4 pt-md-3 ">
+            <img src="images/svg/Filter_alt.svg" alt="">&nbsp;
+            <label class="" for="price">Price</label><br>
+            <div class="price_input">
+              <div class="field">
+                <span>Min</span>
+                <input type="number" class="input_min" value="50">
+              </div>
+              <div class="separator">-</div>
+              <div class="field">
+                <span>Max</span>
+                <input type="number" class="input_max" value="650">
+              </div>
+            </div>
+            <div class="slider_range">
+              <div class="progress_range"></div>
+            </div>
+            <div class="range-input">
+              <input type="range" class="range_min" min="0" max="1000" value="50" step="50">
+              <input type="range" class="range_max" min="0" max="1000" value="650" step="50">
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-12 pt-4 pt-md-3">
+            <img src="images/svg/Date_today.svg" alt="">&nbsp;
+            <label for="date"> Date</label>
+            <div class="calendar">
+
+              <input type="date" class="form-control" id="date_card" name="date">
+            </div>
+
+          </div>
+          <div class="col-md-3 mb-sm-3 mb-xs-3 mt-lg-4 pt-lg-3 ">
+            <button class=" btn btn-success btn_card float-lg-end">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- hunt  -->
+
+<section class="">
+  <div class="container ">
+    <h3 class="mb-6 mt-10 wow fadeInDown" data-wow-delay="0.0s">Looking for a location to hunt?</h3>
+    <div class="row">
+      <div class="col-lg-3 col-sm-6 wow fadeInLeft" data-wow-delay="0.1s">
+        <img src="images/img3.jpg" alt="">
+      </div>
+      <div class=" col-lg-9 col-sm-6 svg_img_icons">
+        <div class="row">
+          <div class="col-lg-4 col-sm-12 mt-3 wow fadeInUp" data-wow-delay="0.1s">
+            <img src="images/svg/shield_check.svg" alt="">
+            <h4 class="steps mt-3">Step 1.</h4>
+            <p>
+              Request yourself as a “Verified Hunter” and get approval from PWONZ
+              team.
+            </p>
+          </div>
+          <div class="col-lg-4 col-sm-12 mt-3 wow fadeInUp" data-wow-delay="0.2s">
+            <img src="images/svg/search.svg" alt="">
+            <h4 class="steps mt-3">Step 2.</h4>
+            <p>
+              Once you become a “Verified Hunter”, start searching the site and make a booking.
+            </p>
+          </div>
+          <div class="col-lg-4 col-sm-12 mt-3 wow fadeInRight" data-wow-delay="0.3s">
+            <img src="images/svg/star.svg" alt="">
+            <h4 class="steps mt-3">Step 3.</h4>
+            <p>
+              Enjoy your hunting with your <br> mates!
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class=col-lg-4>
+          </div>
+          <div class=col-lg-4>
+
+          </div>
+          <div class="col-lg-4">
+            <a class="text-success" href="#"> Register now &nbsp; <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</section>
+
+<!-- hunt slider  -->
+<section class="like_btn">
+  <div class=" overflow-hidden">
+    <div>
+      <h3 class=" container mt-10 mb-6 wow fadeInDown" data-wow-delay="0.1s">Recommended sites for hunters</h3>
+    </div>
+    <div class="owl-carousel owl-theme wow fadeInUp" data-wow-delay="0.1s" id="">
+
+      <div class="slider_hp wow fadeInUp" data-wow-delay="0.1s">
+        <img src="images/img2.jpg" alt="" />
+        <div class="p-3">
+          <h4 class="mt-2">4ha Farm in Loburn</h4>
+          <p>Loburn, Waimakariri, Canterbury</p> <br />
+          Max. 4 hunters per booking
+          <h4>$80 pp/ day <span class="float-right"><i class="fas fa-heart icon_red"></i></span></h4>
+        </div>
+      </div>
+      <div class="slider_hp wow fadeInUp" data-wow-delay="0.1s">
+        <img src="images/img4.jpg" alt="" />
+        <div class="p-3">
+          <h4 class="mt-2">Ungluemanhole</h4>
+          <p>Ashwick Flat, Mackenzie, Canterbury</p> <br />
+          Max. 4 hunters per booking
+          <h4>$95 pp/ day<span class="float-right"><i class="fal fa-heart"></i></span></h4>
+        </div>
+      </div>
+      <div class="slider_hp wow fadeInUp" data-wow-delay="0.1s">
+        <img src="images/img1.jpg" alt="" />
+        <div class="p-3">
+          <h4 class="mt-2">Terekdriving Timaru</h4>
+          <p>Loburn, Waimakariri, Canterbury</p> <br />
+          No limit
+          <h4>$150 pp/ day<span class="float-right"><i class="fal fa-heart"></i></span></h4>
+        </div>
+      </div>
+      <div class="slider_hp wow fadeInUp" data-wow-delay="0.1s">
+        <img src="images/img4.jpg" alt="" />
+        <div class="p-3">
+          <h4 class="mt-2">4ha Farm in Loburn</h4>
+          <p>Loburn, Waimakariri, Canterbury</p> <br />
+          Max. 4 hunters per booking
+          <h4>$80 pp/ day <span class="float-right"><i class="fal fa-heart"></i></span></h4>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- Pest  -->
+
+<section class="">
+  <div class="container ">
+    <h3 class="mb-6 mt-10 wow fadeInDown" data-wow-delay="0.1s">Looking for a Pest Control Service?</h3>
+    <div class="row">
+      <div class="col-lg-3 col-sm-6 wow fadeInLeft" data-wow-delay="0.1s">
+        <img src="images/pest.jpg" alt="">
+      </div>
+      <div class=" col-lg-9 col-sm-6 svg_img_icons">
+        <div class="row">
+          <div class="col-lg-4 col-sm-12 mt-3 wow fadeInLeft" data-wow-delay="0.1s">
+            <img src="images/svg/Desk_light.svg" alt="">
+            <h4 class="steps mt-3">Step 1.</h4>
+            <p>
+              Request quote from Pest Control Service provider.
+            </p>
+          </div>
+          <div class="col-lg-4 col-sm-12 mt-3 wow fadeInUp" data-wow-delay="0.2s">
+            <img src="images/svg/Pin_alt_light.svg" alt="">
+            <h4 class="steps mt-3">Step 2.</h4>
+            <p>
+              Once the service provider inspect your site, you will receive the quote.
+            </p>
+          </div>
+          <div class="col-lg-4 col-sm-12 mt-3 wow fadeInRight" data-wow-delay="0.2s">
+            <img src="images/svg/File_dock_search.svg" alt="">
+            <h4 class="steps mt-3">Step 3.</h4>
+            <p>
+              Now, let the pest controller to take care of your farm.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</section>
+
+
+
+<!-- SLIDER PEST CONTROL  -->
+<section class="like_btn">
+  <div class="overflow-hidden">
+    <div>
+      <h3 class="container mt-10 mb-6 wow fadeInDown" data-wow-delay="0.1s">Recommended Services for Pest Control</h3>
+    </div>
+    <div class="owl-carousel owl-theme wow fadeInUp" data-wow-delay="0.1s"  id="">
+
+      <div class="slider_hp">
+        <img src="images/cymon.png" alt="" />
+        <div class="p-3">
+          <h4 class="mt-2">Cymon Pest Control</h4>
+          <p>CBD, Christchurh, Canterbury</p>
+          <br>
+
+          <i class="fal fa-box-open"></i>&nbsp; &nbsp;
+          <i class="fal fa-location"></i>&nbsp; &nbsp;
+          <i class="fal fa-fire"></i>&nbsp; &nbsp;
+          <i class="fal fa-flag"></i>&nbsp; &nbsp;
+          <span class="float-right">
+            <i class="fal fa-heart"></i>
+          </span>
+        </div>
+      </div>
+
+      <div class="slider_hp">
+
+        <img src="images/blue.png" alt="" />
+        <div class="p-3">
+          <h4 class="mt-2">Blue group</h4>
+          <p>Rangiora, Christchurh, Canterbury</p>
+          <br>
+
+          <i class="fal fa-box-open"></i>&nbsp; &nbsp;
+          <i class="fal fa-location"></i>&nbsp; &nbsp;
+          <i class="fal fa-fire"></i>&nbsp; &nbsp;
+          <i class="fal fa-flag"></i>&nbsp; &nbsp;
+          <span class="float-right">
+            <i class="fal fa-heart"></i>
+          </span>
+        </div>
+      </div>
+      <div class="slider_hp">
+
+        <img src="images/no.png" alt="" />
+        <div class="p-3">
+          <h4 class="mt-2">No.1 Pest removal</h4>
+          <p>CBD, Christchurh, Canterbury</p>
+          <br>
+
+          <i class="fal fa-box-open"></i>&nbsp; &nbsp;
+          <i class="fal fa-location"></i>&nbsp; &nbsp;
+          <i class="fal fa-fire"></i>&nbsp; &nbsp;
+          <i class="fal fa-flag"></i>&nbsp; &nbsp;
+          <span class="float-right">
+            <i class="fal fa-heart"></i>
+          </span>
+        </div>
+      </div>
+      <div class="slider_hp">
+
+        <img src="images/img4.jpg" alt="" />
+        <div class="p-3">
+          <h4 class="mt-2">Cymon Pest Control</h4>
+          <p>CBD, Christchurh, Canterbury</p>
+          <br>
+
+          <i class="fal fa-box-open"></i>&nbsp; &nbsp;
+          <i class="fal fa-location"></i>&nbsp; &nbsp;
+          <i class="fal fa-fire"></i>&nbsp; &nbsp;
+          <i class="fal fa-flag"></i>&nbsp; &nbsp;
+          <span class="float-right">
+            <i class="fal fa-heart"></i>
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+
+<!-- Call to action  -->
+
+
+<section class=" bg_brown mt-10 pt-5 pb-5 ">
+  <div class="container " id="">
+    <div class="row text-light">
+
+      <div class="col-md-6 d-md-block d-sm-block d-xs-block d-lg-none wow fadeInUp" data-wow-delay="0.1s">
+        <h3 class="text-light">Do you own a land to make an extra income?</h3>
+        <a class="light_green d-none d-md-block" href="">List your site now&nbsp; <i class="fas fa-arrow-right"></i></a>
+
+      </div>
+      <div class="col-lg-12 col-md-6 svg_img_icons">
+        <div class="row">
+          <div class="col-lg-3 mt-2 mt-lg-0 wow fadeInLeft" data-wow-delay="0.1s">
+            <img src="images/svg/Chield_check_light.svg"  alt="">
+            <h4 class="steps text-light pt-4">Listing for FREE</h4>
+            <p class="text-light">
+              Create a new listing from your dashboard. Let hunters use your land.
+            </p>
+          </div>
+          <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+            <img src="images/svg/Book_check_light.svg" alt="">
+            <h4 class="steps text-light pt-4">Approval</h4>
+            <p class="text-light">
+              Wait for approval from our PWONZ team.
+            </p>
+          </div>
+          <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+            <img src="images/svg/Bell_pin_light.svg" alt="">
+            <h4 class="steps text-light pt-4">Ready to earn</h4>
+            <p class="text-light">
+              You will receive a notification by SMS if anyone book.
+            </p>
+          </div>
+          <div class="col-lg-3 d-none d-lg-block d-xl-block d-xxl-block wow fadeInRight" data-wow-delay="0.1s">
+            <h3 class="text-light">Do you own a <br> land to make <br>an extra <br> income?</h3>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-sm-12">
+
+            </div>
+            <div class="col-lg-3 col-sm-12">
+
+            </div>
+            <div class="col-lg-3 col-sm-12">
+
+            </div>
+            <div class="col-lg-3 col-sm-12  wow fadeInRight" data-wow-delay="0.1s">
+              <a class="light_green d-md-none d-lg-block cta_link" href="">List your site now&nbsp; <i
+                  class="fas fa-arrow-right"></i></a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- blog -->
+
+<section class="mt-5">
+
+  <div class="container" id="blog">
+
+    <div class="row">
+
+      <div class="col-lg-6 col-sm-12 pb-xs-2 mt-lg-10 wow fadeInLeft" data-wow-delay="0.1s">
+        <img src="images/b1.png" alt="">
+      </div>
+      <div class="col-lg-6 col-sm-12 mt-lg-10 pt-md-3  pt-lg-0 wow fadeInRight" data-wow-delay="0.1s">
+        <h3>Did you know, spring is another favourable time of the year to <br>hunt fallow deer.</h3>
+        <p class="">If you are a registered hunter in NZ you can search the site and book your favourite one.
+        </p>
+        <div class="read_full">
+          <a class="link_btn" href="#"> Read full article &nbsp; <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-6 col-sm-12 mt-lg-7 b_1 pt-md-3 pt-lg-0  wow fadeInUp" data-wow-delay="0.1">
+
+        <h3 class="">What to Watch on Wednesday: Peacock finally hatches with Brave New World, Psych 2, and more
+        </h3>
+        <p class="">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+        <div class="read_full">
+          <a class="link_btn" href="#"> Read full article &nbsp; <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-sm-12 mt-lg-7 b_2 wow fadeInRight" data-wow-delay="0.1s">
+        <img src="images/b2.png" alt="">
+      </div>
+
+
+    </div>
+  </div>
+
+</section>
+
+
+<!-- Value Deals Cards  -->
+
+
+<section>
+  <div class="container">
+    <div class="wow fadeInDown" data-wow-delay="0.1s">
+      <h3 class="mb-6 mt-10">Value DEALS for hunters!</h3>
+    </div>
+    <div class="row value_card">
+      <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="row value_deals">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+            <img src="images/c1.png" class="img-fluid hill-round" alt="">
+          </div>
+          <div class="col-lg-8 col-md-8 col-sm-8 col-12 value_content align-items-center">
+            <h4 class="">$75 PP/ per day</h4>
+            <s>$95 PP/ per day</s> <br>
+            <i class="fa fa-arrow-right float-right"></i>
+            <br>
+            <span>Greenland in Mackenzie<br>
+              Ashwick Flat, Mackenzie, Canterbury</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="row value_deals">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+            <img src="images/c2.png" class="img-fluid hill-round" alt="">
+          </div>
+          <div class="col-lg-8 col-md-8 col-sm-8 col-12 value_content align-items-center">
+            <h4 class="">$99 PP/ per day</h4>
+            <s>$119 PP/ per day</s> <br>
+            <i class="fa fa-arrow-right float-right"></i>
+            <br>
+            <span>Flat Hill<br>
+              Loburn, Waimakariri, Canterbury</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="row value_deals">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+            <img src="images/c3.png" class="img-fluid hill-round" alt="">
+          </div>
+          <div class="col-lg-8 col-md-8 col-sm-8 col-12 value_content align-items-center">
+            <h4 class="">$320/ per day (up to 4 people)</h4>
+            <s>$95 PP/ per day</s> <br>
+            <i class="fa fa-arrow-right float-right"></i>
+            <br>
+            <span>Honorulu Forest<br>
+              Waihao Downs, Waimate, Canterbury</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="row value_deals">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+            <img src="images/c4.png" class="img-fluid hill-round" alt="">
+          </div>
+          <div class="col-lg-8 col-md-8 col-sm-8 col-12 value_content align-items-center">
+            <h4 class="mt-">$599/ per day (up to 6 people)</h4>
+            <s>$139 PP/ per day</s> <br>
+            <i class="fa fa-arrow-right float-right"></i>
+            <br>
+            <span>Greenland in Mackenzie<br>
+              Ashwick Flat, Mackenzie, Canterbury</span>
+          </div>
+        </div>
+      </div>
+      <div class="pt-5" id="brown_box">
+        <a class="float-right link_btn" href="#">See more deals &nbsp; <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class=" mt-10 ">
+  <div class="container " id="">
+    <div class="row">
+
+      <div class="col-md-6 d-md-block d-sm-block d-xs-block d-lg-none wow fadeInLeft" data-wow-delay="0.1s">
+        <h3 class="">Still not verified as a HUNTER?</h3>
+
+        <a class="text-success d-none d-md-block pt-md-3" href="">Register now&nbsp; <i
+            class="fas fa-arrow-right"></i></a>
+
+      </div>
+
+      <div class="col-lg-12 col-md-6 svg_img_icons">
+        <div class="row">
+          <div class="col-lg-3 wow fadeInLeft" data-wow-delay="0.2s">
+            <img src="images/svg/File_dock_light.svg" alt="">
+            <h4 class="steps mt-3">Register</h4>
+            <p>
+              Provide your details and upload the proof of firearms license
+            </p>
+          </div>
+          <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+            <img src="images/svg/User_box_light.svg" alt="">
+            <h4 class="steps mt-3">Approved</h4>
+            <p>
+              Wait for approval from our PWONZ team.
+            </p>
+          </div>
+          <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+            <img src="images/svg/Bookmark_light.svg" alt="">
+            <h4 class="steps mt-3">Hunt your sites!</h4>
+            <p>
+              Feel free to cruise the site for the best deals
+            </p>
+          </div>
+          <div class="col-lg-3 d-none d-lg-block d-xl-block d-xxl-block wow fadeInRight" data-wow-delay="0.2s">
+            <h3>Still not <br> verified as a <br> HUNTER?</h3>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-sm-12">
+
+            </div>
+            <div class="col-lg-3 col-sm-12">
+
+            </div>
+            <div class="col-lg-3 col-sm-12">
+
+            </div>
+            <div class="col-lg-3 col-sm-12">
+              <a class="text-success d-md-none d-lg-block cta_link" href="">Register now&nbsp; <i
+                  class="fas fa-arrow-right"></i></a>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Article  -->
+
+<section class="">
+  <div class="container mt-10 mb-6" id="article">
+    <div class="row">
+      <div class="col-lg-4 col-sm-12 wow fadeInUp" data-wow-delay="0.1s">
+        <h3 class="mb-md-5">
+          Articles for you to read
+        </h3>
+        <div class="d-none d-lg-block">
+          <a class="float-left link_btn" href=" #">More articles &nbsp; <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="card">
+          <img src="images/unsplash_47xRh6ff8w0.png" class="card-img-top" alt="...">
+          <div class="card-body mb-5">
+            <h5 class="card-title">The Calm meditation app is getting its own celebrity-filled HBO Max <br> show
+            </h5>
+            <p class="card-text">As machines become increasingly capable, tasks considered to require "intelligence"
+              are often removed from the definition.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="card">
+          <img src="images/unsplash_nHK_yXLQV8c.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Spaceflight Inc. debuts new orbital transfer vehicle for satellite rideshare
+              rocket
+              launches</h5>
+            <p class="card-text">A web browser (commonly referred to as a browser) is a software application for
+              accessing information on the World Wide Web.</p>
+          </div>
+        </div>
+      </div>
+      <div class="d-md-block d-sm-block d-xm-block d-lg-none">
+        <a class="link_btn" href="#">More articles &nbsp; <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="container mt-10  mb-6 brand_logo">
+
+    <div class="row gap-lg-3">
+      <div class="col-lg-3 wow fadeInLeft" data-wow-delay="0.1s">
+        <h3>Partners with Pest Wipeout NZ</h3>
+      </div>
+      <div class="col-lg-2 col-sm-3 col-6 pt-5 wow fadeInUp" data-wow-delay="0.2s">
+        <img src="images/svg/Quizlet.svg" class="float-lg-end" alt="">
+      </div>
+      <div class="col-lg-2 col-sm-3 col-6 pt-5 wow fadeInUp" data-wow-delay="0.1s">
+        <img src="images/svg/Adobe.svg" class="float-lg-end" alt="">
+      </div>
+      <div class="col-lg-2 col-sm-3 col-6 pt-5 wow fadeInUp" data-wow-delay="0.2s">
+        <img src="images/svg/Capitaone.svg" class="float-lg-end" alt="">
+      </div>
+      <div class="col-lg-2 col-sm-3 col-6 pt-5 mt-3 wow fadeInUp" data-wow-delay="0.1s">
+        <img src="images/svg/Kickstarter.svg" class="float-lg-end" alt="">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</body>
+<footer class="mt-10 bg_grey" id="footer">
+
+  <div class="footer-top bg_grey pt-5 pb-5">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-md-4 col-12  footer-info f_1 wow fadeInLeft" data-wow-delay="0.1s">
+          <img src="images/logo.png" alt="">
+        </div>
+        <div class="col-lg-2 col-md-4 col-6  footer-links wow fadeInUp" data-wow-delay="0.2s">
+          <h4>Hunting sites</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Canterbury</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">West Coast</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Otago</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Manawatu Wanganui</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Waikato</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 footer-links wow fadeInUp" data-wow-delay="0.1s">
+          <h4>Listings</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Site listing</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Service listing</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 footer-links wow fadeInUp" data-wow-delay="0.1s">
+          <h4>Information</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Blog / Articles</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Site user guide</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Hunting guide</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms and conditions</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Cookies</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 footer-links wow fadeInUp" data-wow-delay="0.1s">
+          <h4>Support</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Contact us</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">FAQ</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Report a problem</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6  footer-links wow fadeInUp" data-wow-delay="0.1s">
+          <h4>Find us on</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Facebook</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Instagram</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Linked In</a></li>
+          </ul>
+        </div>
+        <div class="container mt-3 col-lg-12 col-md-12 col-12 copyright_ wow fadeInUp" data-wow-delay="0.2s">
+          <p class="float-right mb-lg-3"> © 2021, Shavedice ltd. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="clearfix"></div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+    </script>
+  
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwTAIqQEjqjoDqsMat1H7pgDnke4yZdSA&libraries=places&callback=initAuto"
+    async defer></script>
+ 
+
+</footer>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+
+    <link rel="stylesheet" href="css/jquery-ui.multidatespicker.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+    <script src="js/jquery-ui.multidatespicker.js"></script>
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="mdp-demo"></div>
+    <input type="text" id="altField" value="">
+    <button id="block_weekends">Block Weekends</button>
+    <button id="block_public">Block Public Holidays</button>
+    <input type="text" id="is_weekends_blocked" />
+</body>
+
+
+
+
+<script>
+    var date = new Date();
+    var today = new Date();
+    var y = today.getFullYear();
+
+//Get full month
+
+
+var month1 = 2;
+var year = new Date().getFullYear();
+// var year = 2020;
+var is_leapyear = ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
+
+
+//   console.log(is_leapyear);
+if(is_leapyear==false)
+{
+var month_days = [0,31,28,31,30,31,30,31,31,30,31,30,31]; //days in each month, complete the array
+}
+else
+{
+    var month_days = [0,31,29,31,30,31,30,31,31,30,31,30,31]; //days in each month, complete the array    
+}
+var result = [3];
+// console.log(month_days[]);
+
+for (var i = 1; i <= month_days[month1]; i++) {
+   
+    var date = i
+    if (i < 10) {
+        date = "0"+i;
+    }
+    if (month1 < 10) {
+    month = "0"+month1;
+    }
+    result.push(month1+"/"+date+"/"+year);
+   
+}
+
+
+
+
+
+
+    $('#mdp-demo').multiDatesPicker(
+        {
+            altField: '#altField',
+            minDate: 0,
+            // addDates: setdates,
+            numberOfMonths: [1, 3],
+        }
+    );
+
+
+    $('#block_weekends').click(function () {
+        var text = $(this).html();
+        // console.log(text);
+        if (text == "Block Weekends") {
+            $(this).html("Unblock Weekends");
+            $("#is_weekends_blocked").val(true);
+
+            // setdates = ["01/29/2022", "01/25/2022"];
+            $('#mdp-demo').multiDatesPicker(
+                {
+                    // addDisabledDates: ["01/06/2022", "01/26/2022"],
+                    beforeShowDay: $.datepicker.noWeekends,
+                    altField: '#altField',
+                    // abc: '$myvar',
+
+                    // addDates: ['10/14/'+y, '02/19/'+y, '01/14/'+y, '11/16/'+y],
+                    // addDates: setdates,
+                    // numberOfMonths: [1, 3],
+                    // defaultDate: '1/1/' + y
+                }   
+            );
+        }
+        else{
+            $(this).html("Block Weekends");
+            $("#is_weekends_blocked").val(false);
+            $('#mdp-demo').multiDatesPicker(
+                {
+                    beforeShowDay: $.datepicker.Weekends,
+                    altField: '#altField',
+
+                    // addDates: ['10/14/'+y, '02/19/'+y, '01/14/'+y, '11/16/'+y],
+                    // addDates: setdates,
+                    // numberOfMonths: [1, 3],  
+                    // defaultDate: '1/1/' + y
+                });
+    }
+    });
+</script>
+
+<!-- <script>
+    var my_date = "2022-01-27".split('-')
+    var year = parseInt(my_date[0]);
+    var month = parseInt(my_date[1]) - 1;
+
+    var saturdays = [];
+    var sundays = [];
+
+    for (var i = 0; i <= new Date(year, month, 0).getDate(); i++) {
+        var date = new Date(year, month, i);
+
+        if (date.getDay() == 6) {
+            saturdays.push(date);
+        }
+        else if (date.getDay() == 0) {
+            sundays.push(date);
+        }
+    };
+
+    console.log(sundays, saturdays);
+</script> -->
+
+
+</html>

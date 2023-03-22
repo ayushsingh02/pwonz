@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Fontawesome  -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- Google font  -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Dashboard</title>
+</head>
+<div id="header"></div>
+<script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+</script>
+<script>
+  $(function(){
+  $("#header").load("header.html"); 
+});
+</script>
+
+<body>
+    <div class="mt-lg-80">
+        <div class="sidebar pt-3 m-0 p-0">
+            <a href="#home">Dashboard</a>
+        
+            <a href="#news">My Listing</a>
+            <a href="#contact">Chat</a>
+            <a href="#about">Quotes</a>
+            <a href="#home">Invoices</a>
+            <a href="#news">Bookings</a>
+            <a href="#contact">Payment History</a>
+            <a href="#about">Settings</a>
+            <a href="#" id="be">Be verified Hunter <i class="far fa-shield-check" id="fab"></i></a>
+        </div>
+    </div>
+
+
+
+    <div class="content  pt-5 dashboard">
+        <div class="container">
+            <div class="ms-lg-5  mt-5 pt-sm-3 ms-sm-5">
+                <h2 class="">My Booking Overview</h2>
+            </div>
+            <div class="row ">
+                <div class="col-12 col-lg-6">
+                    <div class="card ms-lg-5 me-lg-3 mt-4 p-4">
+                        <div>
+                            <div>
+                                <p>Pending Bookings</p>
+                            </div>
+                            <div class="d-flex">
+                                <h6 class="fs-1">2</h6>
+
+                            </div>
+                            <i class="fas fa-arrow-right float-end"></i>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="card  me-lg-5  mt-4 p-4">
+                        <div>
+                            <div>
+                                <p>Upcoming Bookings</p>
+                            </div>
+                            <div class="d-flex">
+                                <h6 class="fs-1">1</h6>
+                            </div>
+                            <i class="fas fa-arrow-right float-end"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="card ms-lg-5 me-lg-3  mt-4 p-4">
+                        <div>
+                            <div>
+                                <p>Pending Request</p>
+                            </div>
+                            <div class="d-flex">
+                                <h6 class="fs-1">4</h6>
+                            </div>
+                            <i class="fas fa-arrow-right float-end"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="card me-lg-5 mt-4 p-4">
+                        <div>
+                            <div>
+                                <p>Upcoming Confirm Bookings</p>
+                            </div>
+                            <div class="d-flex">
+                                <h6 class="fs-1">15</h6>
+                            </div>
+                            <i class="fas fa-arrow-right float-end"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+   
+</body>
+<hr>
+<div class=" container ">
+    <p class="float-end ">
+        © 2021, Shavedice ltd. All Rights Reserved.
+    </p>
+</div>
+<footer class="mt-10 bg_grey" id="footer">
+
+
+
+    <div class="clearfix"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</footer>
+
+</html>

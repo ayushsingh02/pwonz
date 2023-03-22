@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Fontawesome  -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- Google font  -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Sign up</title>
+</head>
+<div id="header"></div>
+<script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+</script>
+<script>
+  $(function(){
+  $("#header").load("header.html"); 
+});
+</script>
+
+<body class="mt-lg-80 login_body">
+    <form action="" method="post" class=" sign_up login_form signup_form">
+
+        <fieldset class="signup_form_steps active_step step-1">
+            <div class="container ">
+                <div class="card row">
+                    <div class="col-lg-6 col-12 col-sm-6 p-lg-5 p-sm-5">
+                        <img src="images/svg/signup1.svg" class="mt-lg-5 mt-sm-5" alt="">
+                    </div>
+                    <div class="col-lg-6 col-sm-6 col-12 card_body ">
+                        <div class="text-center mt-4">
+                            <h6 class="card-title" class="">Sign up</h6>
+                        </div>
+
+                        <div class="mt-3">
+                            <label for="">Full Name</label>
+                            <input type="text" name="name" id="name" class="frm mt-2 p-2" placeholder="Full Name">
+
+                            <p class=" text-danger" id="nameError"></p>
+
+                        </div>
+                        <div class="mt-3">
+                            <label for="">Email</label>
+                            <input type="text" name="email" id="email" class="frm mt-2 p-2" placeholder="Email">
+
+                            <p class="form-text text-danger" id="emailError"></p>
+
+                        </div>
+                        <div class="mt-3">
+                            <label for="">Mobile Phone</label>
+                            <input type="number" name="mobile" id="mobile" class="frm mt-2 p-2" placeholder="+64">
+
+                            <p class="form-text text-danger" id="mobileError"></p>
+
+                        </div>
+
+                        <input type="button" name="next" class=" next-btn next action-button float-right mt-5 mb-5"
+                            value="Next Step >" />
+                    </div>
+                </div>
+
+            </div>
+
+        </fieldset>
+        <fieldset class="signup_form_steps step-2">
+            <div class="container">
+                <div class="card row">
+                    <div class="col-lg-6 col-sm-6 col-12 p-lg-5 p-sm-5">
+                        <img src="images/svg/signup2.svg" class="mt-lg-5 mt-sm-5" alt="">
+                    </div>
+                    <div class="col-lg-6 col-sm-6 col-12 card_body ">
+                        <div class="text-center mt-4">
+                            <h6 class="card-title" class="">Sign up</h6>
+                        </div>
+
+                        <div class="mt-3">
+                            <label for="">Username</label>
+                            <input type="text" name="username" id="username" class="frm mt-2 p-2"
+                                placeholder="Username">
+                            <p class="form-text text-danger" id="usernameError"></p>
+                        </div>
+                        <div class="mt-3">
+                            <label for="">Password</label>
+                            <input type="password" name="password" id="password" class="frm mt-2 p-2"
+                                placeholder="Password">
+                            <p class="form-text text-danger" id="passwordError"></p>
+                        </div>
+                        <div class="mt-3">
+                            <label for="">Confirm Password</label>
+                            <input type="password" name="confirmPassword" id="confirmPassword" class="frm mt-2 p-2"
+                                placeholder="Password">
+                            <p class="form-text text-danger" id="confirmPasswordError"></p>
+                        </div>
+
+                        <!-- <a href="signup_success.html"><input type="submit" name="next"
+                                class="next action-button submit-btn float-right mt-5 mb-5" value="Submit >" /></a> -->
+                        <!-- <button class="btn btn-success float-right mt-5 mb-5 submit_signup" type="submit" id="submit_signup">
+                            Submit
+                        </button> -->
+
+                        <input type="button" name="previous" class=" prev-btn action-button previous mt-5 mb-5 pt-1 "
+                            value="< Back" />
+                        <a href="https://www.google.co.in/"><input type="submit" value="Submit" class="btn btn-success mt-5 mb-5 submit_signup float-right">
+                        </a>
+                      </div>
+                </div>
+
+            </div>
+
+        </fieldset>
+    </form>
+</body>
+<footer class="mt-10 bg_grey" id="footer">
+
+    <div class="footer-top bg_grey pt-5 pb-5">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-4 col-12  footer-info f_1">
+                    <img src="{{asset('public/images/logo.png')}}" alt="">
+                </div>
+                <div class="col-lg-2 col-md-4 col-6  footer-links">
+                    <h5>Hunting sites</h5>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Canterbury</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">West Coast</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Otago</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Manawatu Wanganui</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Waikato</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 footer-links">
+                    <h5>Listings</h5>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Site listing</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Service listing</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 footer-links">
+                    <h5>Information</h5>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Blog / Articles</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Site user guide</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Hunting guide</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Terms and conditions</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 footer-links">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Contact us</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">FAQ</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Report a problem</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6  footer-links">
+                    <h5>Find us on</h5>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Facebook</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Instagram</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Linked In</a></li>
+                    </ul>
+                </div>
+                <div class="container mt-3 col-lg-12 col-md-12 col-12 copyright_">
+                    <p class="float-right mb-lg-3"> © 2021, Shavedive ltd. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="validation.js" type="text/javascript"></script>
+
+</footer>
+
+</html>

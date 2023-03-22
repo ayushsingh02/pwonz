@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Fontawesome  -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- Google font  -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Reset_password</title>
+</head>
+<div id="header"></div>
+<script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+</script>
+<script>
+  $(function(){
+  $("#header").load("header.html"); 
+});
+</script>
+
+<body class="mt-lg-80 login_body">
+    <form action="" class="login_form new_passVal">
+    
+        <fieldset class="">
+            
+            <div class="container">
+                
+                <div class="card p-lg-4 p-sm- p-md-4 p-4 ">
+                    <div class="alert alert-success" role="alert" >
+                       Your Password is updated.
+                      </div>
+                    <div class="card-body">
+                        <div class="text-center">
+                            <h6 class="card-title" class="">Reset password</h6>
+                        </div>
+                       
+                        <div class="mt-4 ">
+                            <label for="">New password</label>
+                            <input type="password" class="frm mt-2 p-2" id="new_pass" name="" placeholder="New password">
+                        </div>
+                        <div class="mt-2">
+                            <p id="new_passError" class="text-danger"></p>
+                        </div>
+                        <div class="mt-4 ">
+                            <label for="">Confirm password</label>
+                            <input type="password" class="frm mt-2 p-2" id="confirm_pass" name="confirm_pass" placeholder="Confirm password">
+                        </div>
+                        <div class="mt-2">
+                            <p id="confirm_passError" class="text-danger"></p>
+                        </div>
+
+                       
+                        <div class="text-center mt-4">
+                            <button class="btn btn-success update_pass">Update</button>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+
+        </fieldset>
+     
+    </form>
+</body>
+<footer class="mt-10 bg_grey" id="footer">
+ 
+    <div class="footer-top bg_grey pt-5 pb-5">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-4 col-12  footer-info f_1">
+                    <img src="images/logo.png" alt="">
+                </div>
+                <div class="col-lg-2 col-md-4 col-6  footer-links">
+                    <h5>Hunting sites</h5>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Canterbury</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">West Coast</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Otago</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Manawatu Wanganui</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Waikato</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 footer-links">
+                    <h5>Listings</h5>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Site listing</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Service listing</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 footer-links">
+                    <h5>Information</h5>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Blog / Articles</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Site user guide</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Hunting guide</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Terms and conditions</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 footer-links">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Contact us</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">FAQ</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Report a problem</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6  footer-links">
+                    <h5>Find us on</h5>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Facebook</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Instagram</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Linked In</a></li>
+                    </ul>
+                </div>
+                <div class="container mt-3 col-lg-12 col-md-12 col-12 copyright_">
+                    <p class="float-right mb-lg-3"> © 2021, Shavedive ltd. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <div class="clearfix"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="script.js"></script>
+    <script src="validation.js"></script>
+</footer>
+
+</html>
