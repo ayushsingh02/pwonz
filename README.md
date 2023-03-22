@@ -6,7 +6,7 @@
 ### Screenshots
 
   ```Homepage```
-![alt text](https://github.com/ayushsingh02/pwonz/blob/73a10abed85f2339fad1359c7de1a3ddc21854dd/images/home.png)
+![alt text](https://github.com/ayushsingh02/pwonz/blob/9986106e4bd10ab6f6d934e2c52caa95b8748d83/images/home.png)
 
 
 ```Hunting Listing```
