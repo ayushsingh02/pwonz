@@ -6,7 +6,7 @@
 ### Screenshots
 
   ```Homepage```
-![alt text](https://github.com/ayushsingh02/pwonz/blob/73a10abed85f2339fad1359c7de1a3ddc21854dd/images/Home.png)
+![alt text](https://github.com/ayushsingh02/pwonz/blob/73a10abed85f2339fad1359c7de1a3ddc21854dd/images/home.png)
 
 
 ```Hunting Listing```
@@ -29,6 +29,6 @@
 ![alt text](https://github.com/ayushsingh02/pwonz/blob/73a10abed85f2339fad1359c7de1a3ddc21854dd/images/Support.png)
 
 
-```Support```
+```Thankyou```
 ![alt text](https://github.com/ayushsingh02/pwonz/blob/73a10abed85f2339fad1359c7de1a3ddc21854dd/images/Thankyou.png)
 
